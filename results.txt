@@ -1,0 +1,41 @@
+ALGORITHM,               INIT_STATE,            GOAL_STATE,       PATH_LENGTH,     STATE_EXPANSIONS,  MAX_QLENGTH,  RUNNING_TIME,  DELETIONS_MIDDLE_HEAP, LOCAL_LOOPS_AVOIDED, ATTEMPTED_REEXPANSIONS,   PATH
+DDLURD
+  uniform_cost_search          ,120483765          ,123456780          ,6             ,71               ,89               ,0.000000               ,0                    ,0               ,0               ,DDLURD
+DRULLDRDRULLDRR
+  uniform_cost_search          ,208135467          ,123456780          ,15             ,7505               ,7363               ,0.021000               ,0                    ,0               ,0               ,DRULLDRDRULLDRR
+RDDLLUURRDDLLUURRDD
+  uniform_cost_search          ,704851632          ,123456780          ,19             ,40698               ,33387               ,0.244000               ,0                    ,0               ,0               ,RDDLLUURRDDLLUURRDD
+RDLURULLDRULDDRUULDRDR
+  uniform_cost_search          ,536407182          ,123456780          ,22             ,81779               ,55348               ,0.533000               ,0                    ,0               ,0               ,RDLURULLDRULDDRUULDRDR
+UULDDLUURDLDRURDLURULDLURRDD
+  uniform_cost_search          ,638541720          ,123456780          ,28             ,179697               ,62160               ,1.430000               ,0                    ,0               ,0               ,UULDDLUURDLDRURDLURULDLURRDD
+
+DDLURD
+ astar_misplacedtiles          ,120483765          ,123456780          ,6             ,12               ,21               ,0.000000               ,0                    ,0               ,0               ,DDLURD
+
+DDRUULLDDRRULDR
+ astar_misplacedtiles          ,208135467          ,123456780          ,15             ,544               ,586               ,0.003000               ,0                    ,0               ,0               ,DDRUULLDDRRULDR
+
+RDDLLUURRDDLLUURRDD
+ astar_misplacedtiles          ,704851632          ,123456780          ,19             ,2333               ,2613               ,0.009000               ,0                    ,0               ,0               ,RDDLLUURRDDLLUURRDD
+
+DRULDLURDRUULLDRULDDRR
+ astar_misplacedtiles          ,536407182          ,123456780          ,22             ,10342               ,10169               ,0.062000               ,0                    ,0               ,0               ,DRULDLURDRUULLDRULDDRR
+
+LLURULDDRUURDDLUURDDLULURRDD
+ astar_misplacedtiles          ,638541720          ,123456780          ,28             ,80610               ,54549               ,0.735000               ,0                    ,0               ,0               ,LLURULDDRUURDDLUURDDLULURRDD
+
+DDLURD
+      astar_manhattan          ,120483765          ,123456780          ,6             ,6               ,12               ,0.000000               ,0                    ,0               ,0               ,DDLURD
+
+DRULLDRDRULLDRR
+      astar_manhattan          ,208135467          ,123456780          ,15             ,30               ,51               ,0.000000               ,0                    ,0               ,0               ,DRULLDRDRULLDRR
+
+RDDLLUURRDDLLUURRDD
+      astar_manhattan          ,704851632          ,123456780          ,19             ,19               ,30               ,0.000000               ,0                    ,0               ,0               ,RDDLLUURRDDLLUURRDD
+
+RDLURULDLDRRUULLDRURDD
+      astar_manhattan          ,536407182          ,123456780          ,22             ,191749               ,329105               ,2.309000               ,0                    ,0               ,0               ,RDLURULDLDRRUULLDRURDD
+
+UULLDRDLURULDDRRULDLURULDDRR
+      astar_manhattan          ,638541720          ,123456780          ,28             ,3010477               ,5067047               ,51.497002               ,0                    ,0               ,0               ,UULLDRDLURULDDRRULDLURULDDRR
