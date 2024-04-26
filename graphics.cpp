@@ -4,7 +4,7 @@
 //      Description:  graphics2 package extracted from:
 //                  http://csci.biola.edu/csci105/using_winbgi.html  
 //
-//                  *slightly modified to run for gcc by N.Reyes              
+//                       
 //
 //        History:  March 2, 2019
 //
