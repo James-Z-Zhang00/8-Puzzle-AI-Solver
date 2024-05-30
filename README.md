@@ -1,4 +1,4 @@
-# The first AI search project in C++, refactored for tech accumulation purpose.
+# The first AI search project in C++
 
 ## Initial Board States
 
@@ -12,7 +12,17 @@ Number 0 is the empty pile on the board.
 
 ![8-puzzle-search](https://github.com/James-Z-Zhang00/8-Puzzle-AI-Solver/assets/144994336/71708f6d-0b61-45e6-a516-0160495a5f49)
 
-As shown in the graph, the blank tile can be filled by any other tiles nearby, I convert this theory into a 
+As shown in the graph, the blank tile can be filled by any other tiles nearby, I convert this theory into a C++ map, where 0 indicates the tile on the top left corner, 1 indicates the tile on the top middle.
+
+```
+|0|1|2|
+|3|4|5|
+|7|8|9|
+```
+
+From position 0, you can go to position 1 and 3.
+From position 1, you can go to position 0, 4 and 5.
+And so on
 
 ```cpp
 boardRules["0"] = "13";
