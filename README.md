@@ -35,3 +35,54 @@ boardRules["6"] = "37";
 boardRules["7"] = "468";
 boardRules["8"] = "57";
 ```
+
+## The Algorithm
+
+In a while loop, create a `Queue (Q)` to save the current board status. If the status matches our goal, break the loop.
+
+The board status was save as an object in the queue.
+
+```cpp
+if (Q.empty()) {cout<<"Goal NOT Found"<<endl;break;}
+        grabbedBoard = Q.front();
+        pop_heap(Q.begin(),Q.end(),pc);
+        Q.pop_back();
+		
+		if (grabbedBoard.checkGoal()) {
+			keep_running = false;
+			break;
+		}
+```
+
+Save the board status into has map to avoid check the same path again.
+
+Once we find the path is not what we are looking for, leave it.
+
+```cpp
+		
+		oldLength = Exp.size();
+		Exp[hashFunc(grabbedBoard.getContent())] = grabbedBoard.getContent();
+		// Try to add the grabbed board (puzzle) into hash table
+		// if the previous and the current length is the same
+		// that means failed to add, there is a same board existed
+		// in hash table already.
+		// If the lengths are different, means new board added successfully
+		// we did not expand this board before
+		// so do the algorithm
+		if (oldLength == Exp.size()) {continue;}
+
+```
+
+If the path is not proved bad path (we didn't check before), check the next possible move, then see if we are closer to our goal.
+
+Loop through all possible moves and push the new status into the queue, the queue will sort (heap sorting) out the cloest move and save it for the next exploration.
+
+```cpp
+for (int i = 0; i < newPositions.length(); i++) {
+  Board currentBoard = grabbedBoard;
+  newPosition = newPositions[i];
+  currentBoard.addNewPathAndUpdateBoard(stoi(newPosition));
+  Q.push_back(currentBoard);
+  push_heap(Q.begin(),Q.end(),pc);
+}
+```
