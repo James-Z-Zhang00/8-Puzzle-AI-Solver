@@ -86,3 +86,20 @@ for (int i = 0; i < newPositions.length(); i++) {
   push_heap(Q.begin(),Q.end(),pc);
 }
 ```
+
+During searching and sorting, grabbedBoard object will keep track the path/move (U: Up, D: Down, L: Left, R: Right) and return it when we reached our goal.
+
+```cpp
+//***********************************************************************************************************
+	actualRunningTime = ((float)(clock() - startTime)/CLOCKS_PER_SEC);
+	//path = "DDRRLLLUUURDLUDURDLUU"; //this is just a dummy path for testing the function
+	path = grabbedBoard.getPath();
+	cout << endl;
+	cout << path << endl;
+	pathLength = path.size();
+	return path;
+```
+
+## Apply the Algorithm by Different Sorting Factors
+
+
