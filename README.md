@@ -102,4 +102,34 @@ During searching and sorting, grabbedBoard object will keep track the path/move 
 
 ## Apply the Algorithm by Different Sorting Factors
 
+To apply the searching algorithm by using different sorting factors, simply change the value used for heap sorting.
+
+In the code below there are comparators for heap sorting by the number of misplaced tiles and manhattan distance.
+
+Everytime, the `Queue` will sort and find the move that has minimum distance from the goal (the closest to the goal) and the program will always searching further on the direction that is closest to the goal.
+
+```cpp
+// For UC search
+class PathsComparator {
+public:
+    bool operator() (Board a, Board b) {
+        return a.getCost() >= b.getCost();
+    }
+};
+
+// For misplaced tiles
+class HeuMTComparator {
+public:
+    bool operator() (Board a, Board b) {
+        return a.getHeuByMisplacedTiles() >= b.getHeuByMisplacedTiles();
+    }
+};
+
+// For manhattan distance
+class HeuMDComparator {
+public:
+    bool operator() (Board a, Board b) {
+        return a.getManhattanDistance() >= b.getManhattanDistance();
+    }
+```
 
